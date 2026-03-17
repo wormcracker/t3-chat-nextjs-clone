@@ -23,3 +23,10 @@
 - Add Sign-in frontend `./src/app/(auth)/*`
 - Add UserButton to show after login `./src/modules/authentication/*` and display it.
 - Add protection at sign in `./src/app/(auth)/layout.jsx`
+
+## Chat Page Layout
+
+- Add Sidebar `./src/modules/chat/components/chat-sidebar.jsx`
+- Add Header `./src/modules/chat/components/header.jsx`
+- Theme: from docs shadcn
+- Home Page and Chat Form UI `./src/modules/chat/components/chat-message-form.jsx` `./src/modules/chat/components/chat-welcome-tabs.jsx` `./src/modules/chat/components/chat-message-view.jsx`
