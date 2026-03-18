@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { useAIModels } from "@/modules/ai-agent/hook/ai-agent";
+import { Spinner } from "@/components/ui/spinner";
+import { ModelSelector } from "./model-selector";
 
 export default function ChatMessageForm({ initialMessage, onMessageChange }) {
+  const { data: models, isPending } = useAIModels();
+  const [selectedModel, setSelectedModel] = useState(models?.models[0].id);
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -46,7 +51,21 @@ export default function ChatMessageForm({ initialMessage, onMessageChange }) {
           {/* Toolbar */}
           <div className="flex items-center justify-between gap-2 px-3 py-2 border-t ">
             {/* Left side tools */}
-            <div className="flex items-center gap-1">Select a model</div>
+            <div className="flex items-center gap-1">
+              {isPending ? (
+                <>
+                  <Spinner />
+                </>
+              ) : (
+                <>
+                  <ModelSelector
+                    models={models?.models}
+                    selectedModelId={selectedModel}
+                    onModelSelect={setSelectedModel}
+                  />
+                </>
+              )}
+            </div>
 
             {/* Submit Button */}
             <Button
