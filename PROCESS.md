@@ -30,3 +30,10 @@
 - Add Header `./src/modules/chat/components/header.jsx`
 - Theme: from docs shadcn
 - Home Page and Chat Form UI `./src/modules/chat/components/chat-message-form.jsx` `./src/modules/chat/components/chat-welcome-tabs.jsx` `./src/modules/chat/components/chat-message-view.jsx`
+
+## AI model Selector
+
+- Get Openrouter api: docs
+- Get-models api endpoint: `./src/app/api/ai/get-models/route.js`
+- Setup tanstack query: `./src/components/providers/query-provider.jsx`
+- Model-selector component `./src/modules/chat/components/model-selector.jsx`
