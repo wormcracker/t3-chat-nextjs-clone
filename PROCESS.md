@@ -10,6 +10,7 @@
 - CSS: TailwindCss, ai-sdk Ui
 - AI: ai-sdk, openrouter API
 - Infrastructure: Docker, git
+- State Management: Zustand
 
 ## Database Setup
 
@@ -45,3 +46,9 @@
 - Server Actions for chat initializations `./src/modules/chat/actions/index.js`
 - Tanstack Hooks to call it `./src/modules/chat/hooks/chat.js`
 - Mutation in message form `./src/modules/chat/components/chat-message-form.jsx`
+
+## Chat Sidebar
+
+- Add server action to fetch all chats `./src/modules/chat/actions/index.js`
+- implement useChatStore using zustand
+- ChatSider component

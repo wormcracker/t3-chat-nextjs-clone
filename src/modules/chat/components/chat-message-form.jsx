@@ -27,11 +27,17 @@ export default function ChatMessageForm({ initialMessage, onMessageChange }) {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
+      if (!selectedModel) {
+        throw new Error("Model not selected.");
+      }
+      if (!message) {
+        throw new Error("Empty message.");
+      }
       await mutateAsync({ content: message, model: selectedModel });
       toast.success("Message sent sucessfully");
     } catch (error) {
       console.log("Message sent error", error);
-      toast.error("Failed to send message");
+      toast.error(error.message ? error.message : "Failed to send message");
     } finally {
       setMessage("");
     }
