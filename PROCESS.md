@@ -37,3 +37,11 @@
 - Get-models api endpoint: `./src/app/api/ai/get-models/route.js`
 - Setup tanstack query: `./src/components/providers/query-provider.jsx`
 - Model-selector component `./src/modules/chat/components/model-selector.jsx`
+
+## Chat Creation
+
+- Add prisma schema for Chat and Message `./prisma/schema.prisma`
+- 1 Chat: n Messages
+- Server Actions for chat initializations `./src/modules/chat/actions/index.js`
+- Tanstack Hooks to call it `./src/modules/chat/hooks/chat.js`
+- Mutation in message form `./src/modules/chat/components/chat-message-form.jsx`
