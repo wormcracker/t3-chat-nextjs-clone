@@ -52,3 +52,8 @@
 - Add server action to fetch all chats `./src/modules/chat/actions/index.js`
 - implement useChatStore using zustand
 - ChatSider component
+
+## Active chat sidebar
+
+- Chat[chatId] page `./src/app/(root)/chat/[chatId]/page.jsx`
+- Active chat `./src/modules/chat/components/active-chat-loader.jsx`
