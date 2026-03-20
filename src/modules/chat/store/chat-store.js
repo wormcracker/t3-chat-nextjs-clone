@@ -5,7 +5,7 @@ export const useChatStore = create((set, get) => ({
   chats: [], // All user's chats
   activeChatId: null, // Currently open chat
   messages: [], // Messages for the active chat
-  triggeredChats: new Set(), // Track which chats have been auto-triggered
+  triggeredChats: new Set(), // Track which chats have been auto-triggered //
   // 🚀 Setters
   setChats: (chats) => set({ chats }),
   setActiveChatId: (chatId) => set({ activeChatId: chatId }),
@@ -20,6 +20,7 @@ export const useChatStore = create((set, get) => ({
   // 🧹 Clear messages when switching chat
   clearMessages: () => set({ messages: [] }),
 
+  // For chat to trigger
   markChatAsTriggered: (chatId) => {
     const triggered = new Set(get().triggeredChats);
     triggered.add(chatId);

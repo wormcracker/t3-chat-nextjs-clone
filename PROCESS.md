@@ -57,3 +57,12 @@
 
 - Chat[chatId] page `./src/app/(root)/chat/[chatId]/page.jsx`
 - Active chat `./src/modules/chat/components/active-chat-loader.jsx`
+
+## AI SDK
+
+- Create a POST API to call open router with ai-sdk `./src/app/api/chat/route.js`
+
+## Message View Form
+
+- Message view form `./src/modules/chat/components/message-form.jsx`
+- Message Form `./src/modules/chat/components/message-form.jsx`

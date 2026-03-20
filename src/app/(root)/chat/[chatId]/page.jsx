@@ -1,5 +1,6 @@
 import ActiveChatLoader from "@/modules/chat/components/active-chat-loader";
 import MessageForm from "@/modules/chat/components/message-form";
+import MessageViewWithForm from "@/modules/chat/components/message-view-form";
 
 const Page = async ({ params }) => {
   const { chatId } = await params;
@@ -7,7 +8,7 @@ const Page = async ({ params }) => {
   return (
     <div>
       <ActiveChatLoader chatId={chatId} />
-      <MessageForm chatId={chatId} />
+      <MessageViewWithForm chatId={chatId} />
     </div>
   );
 };
